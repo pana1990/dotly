@@ -47,7 +47,7 @@ _w "  ┌───────────────────────�
 _w "~ │ 🚀 Welcome to the ${green}dotly${normal} installer! │ ~"
 _w "  └────────────────────────────────────┘"
 _w
-_q "Where do you want your dotfiles to be located? (default ~/.dotfiles2)" "DOTFILES_PATH"
+# _q "Where do you want your dotfiles to be located? (default ~/.dotfiles2)" "DOTFILES_PATH"
 DOTFILES_PATH="${DOTFILES_PATH:-$HOME/.dotfiles2}"
 DOTFILES_PATH="$(eval echo "$DOTFILES_PATH")"
 
@@ -83,7 +83,7 @@ _a "Initializing your dotfiles git repository"
 git init >/dev/null
 
 _a "Cloning dotly"
-git submodule add "https://github.com/CodelyTV/dotly.git" "$dotly_inner_path" >/dev/null 2>&1
+git submodule add "https://github.com/pana1990/dotly.git" "$dotly_inner_path" >/dev/null 2>&1
 
 _a "Installing dotly dependencies"
 git submodule update --init --recursive >/dev/null 2>&1
